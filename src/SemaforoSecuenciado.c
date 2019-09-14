@@ -79,11 +79,13 @@ void SemaforoPrenderLuz(SemaforoSecuenciado * semSec, int colorLuz,
 }
 
 void CambiarLuz(SemaforoSecuenciado * semSec, int colorLuz, int tiempoEncendido) {
-	EstadoInicial(semSec);
+//	EstadoInicial(semSec);
 	SemaforoPrenderLuz(semSec, colorLuz, tiempoEncendido);
 }
 
 void cicloSemaforo(SemaforoSecuenciado * semSec) {
+//
+
 
 	SemaforoInicializar(semSec, Verde, tiempoLuzVerde);
 	SemaforoImprimir(semSec);
@@ -94,8 +96,8 @@ void cicloSemaforo(SemaforoSecuenciado * semSec) {
 	CambiarLuz(semSec, Roja, tiempoLuzRoja);
 	SemaforoImprimir(semSec);
 
-	CambiarLuz(semSec, Amarilla, tiempoLuzAmarilla);
+	CambiarLuz(semSec, Amarilla, tiempoLuzVerde);
 	SemaforoImprimir(semSec);
 
-	EstadoInicial(semSec);
+//	EstadoInicial(semSec);
 }

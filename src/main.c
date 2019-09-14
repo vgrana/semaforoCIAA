@@ -4,7 +4,7 @@
  *  Created on: 2 sep. 2019
  *      Author: valeria
  */
-
+///gpio salida
 #include "Semaforo1.h"
 #include "SemaforoSecuenciado.h"
 #include "sapi.h"
@@ -36,15 +36,13 @@ int main(void) {
 ////                                 P   A   R  T  E    2                                //
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-//
+//cuando llamo al ciclo q no maneje un delay, le marco un tic relojito
 	SemaforoSecuenciado semaforo;
 
-	int contador = 0;
 	EstadoInicial(&semaforo);
-	while (contador < 1) {
+	while (1) {
 		cicloSemaforo(&semaforo);
-
-//		contador += 1;
+		delay(1000);
 	}
 	return 0;
 

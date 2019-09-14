@@ -7,15 +7,22 @@
 
 #ifndef SEMAFOROSECUENCIADO_H_
 #define SEMAFOROSECUENCIADO_H_
-#define tiempoLuzRoja 7000
-#define tiempoLuzAmarilla 5000
+#define tiempoLuzRoja 4000
+#define tiempoLuzAmarilla 3000
 #define tiempoLuzVerde 2000
-
+//enum con estados del semaforo
+//render es la interface de usuario q seria los led. la logica
+enum estadoSemaforo{
+	R,.....
+};
 typedef struct SemaforoSecuenciado {
 	Semaforo sema;
 	int TiempoRoja;
 	int TiempoAmarilla;
 	int TiempoVerde;
+	///////agregue
+	estadoSemaforo estado
+	int ultimoCambioEstado;
 } SemaforoSecuenciado;
 
 
